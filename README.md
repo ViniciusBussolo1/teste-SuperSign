@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 💻 Projeto
 
-## Getting Started
+Teste para empresa SuperSign.
 
-First, run the development server:
+## ✨ Tecnologias
+
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma](https://prisma.io/)
+- [React-Signature-Canvas](https://www.npmjs.com/package/react-signature-canvas)
+- [React-Toastify](https://www.npmjs.com/package/react-toastify)
+- [Zod](https://zod.dev/)
+- [Next-Auth-V4](https://next-auth.js.org/getting-started/introduction)
+- [bcrypt-ts](https://www.npmjs.com/package/bcrypt-ts)
+- [lucide-react](https://lucide.dev/)
+
+## 🚀 Como executar
+
+Para iniciá-lo, siga os passos abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o Repositório
+$ https://github.com/ViniciusBussolo1/teste-SuperSign.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+# Acesse a pasta do projeto
+$ cd teste-SuperSign
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Baixe as dependências
+$ npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Execute
+$ npm run dev
+```
 
-## Learn More
+O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+## Crie um arquivo `.env` e um `.env.local` na raiz do projeto com o seguinte conteúdo e adicione suas credenciais:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### .env
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+DATABASE_URL
+```
 
-## Deploy on Vercel
+### .env.local
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+NEXTAUTH_URL
+NEXTAUTH_SECRET
+GITHUB_ID
+GITHUB_SECRET
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Neste projeto foi implementado as funcionalidades:
+
+1. Autenticação
+
+- Página de login/registro
+- Proteção de rotas privadas
+- Logout
+- Gerenciamento básico de sessão
+
+2. Gerenciamento de Documentos
+
+- Listagem de documentos do usuário logado
+- Upload de novos documentos (PDF)
+- Visualização de documento --- Esta funcionalidade não foi implementada
+- Exclusão de documentos
+
+3. Assinatura Digital (Simplificada)
+
+- Interface para simular assinatura em documento
+- Registro da assinatura com timestamp
+- Status do documento (Pendente, Assinado)
+
+## A parte mais difícil do projeto foi mexer com a parte de fazer o upload de documentos e a parte de fazer a assinatura digital, pois nunca havia mexido com isso antes. Tive que fazer muitas pesquisas e tentar entender o que estava fazendo e como fazer e utilizar de bibliotecas para facilitar o desenvolvimento.
